@@ -11,7 +11,10 @@ class ShoppingList extends React.Component {
             <>
                 <h1>Lista Zakupów</h1>
                 <ul>
-                    <itemList />
+                    this.forEach(element => {
+                        
+                    });
+                    <itemList name=ite/>
                     <itemList />
                     <itemList />
                 </ul>
@@ -21,8 +24,10 @@ class ShoppingList extends React.Component {
     }
 }
 
-const itemList = () => {
-    
+const itemList = (props) => {
+    return (
+        <li>{props.name}</li>
+    )
 }
 
 ReactDOM.render(<ShoppingList />, document.getElementById('root'))
