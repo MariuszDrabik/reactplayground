@@ -11,12 +11,10 @@ class ShoppingList extends React.Component {
             <>
                 <h1>Lista Zakupów</h1>
                 <ul>
-                    this.forEach(element => {
-                        
-                    });
-                    <itemList name=ite/>
-                    <itemList />
-                    <itemList />
+                    <ItemList name={this.state.item_1}/>
+                    <ItemList name={this.state.item_2}/>
+                    <ItemList name='oko' />
+                    
                 </ul>
             </>
 
@@ -24,10 +22,19 @@ class ShoppingList extends React.Component {
     }
 }
 
-const itemList = (props) => {
-    return (
-        <li>{props.name}</li>
-    )
+// const itemList = (props) => {
+//     return (
+//         <li>{props.name} oko</li>
+//     )
+// }
+
+class ItemList extends React.Component {
+    render () {
+        return (
+            <li>{this.props.name}</li>
+        )
+
+    }
 }
 
 ReactDOM.render(<ShoppingList />, document.getElementById('root'))
