@@ -5,9 +5,10 @@ class Message extends React.Component {
             count: 0,
             result: 0,
         }
+        this.handleClick = this.handleClick.bind(this);
     }
-    
     handleClick(type, number) {
+        // debugger
         this.setState((prevState) => ({
             count: prevState.count + 1,
         }));
@@ -54,9 +55,10 @@ const PanelResult = (props) => {
 }
 
 const MathButton = (props) => {
-    console.log(props)
+    // console.log('wat', props);
     return (
-        <button>-10</button>
+        <button onClick={function() {
+            props.click(props.type, props.number) }}>{props.name}</button>
     )
 }
 
